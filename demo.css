@@ -9,12 +9,17 @@ body{
     font-weight: bolder;
 } */
 img{
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
+    height: 500px;
+    width: 500px;
+}
+@media(max-width:1024px){
+    img{
+        height: auto;
+        width: 100%;
+    }
 }
 video{
-    height: 500px;
+    width: 100%;
 }
 ol{
     list-style-type: upper-roman;
@@ -42,8 +47,15 @@ button{
 }
 nav{
     display: flex;
-    flex-direction: row;
-    gap: 100px;
+    flex-direction: column;
+    /* gap: 100px; */
+}
+@media(min-width:1024px){
+    nav{
+        display:flex;
+        flex-direction:row;
+        gap:100px;
+    }
 }
 *p1{
     font-style: normal;
@@ -60,5 +72,27 @@ nav{
 }
 .grid{
     display: grid;
+    
+}
+@media(min-width:1024px){
+    .grid{
+    display: grid;
     grid-template-columns: 33% 35% 33%;
 }
+}
+.photos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/* #image1{
+    grid-row: 1/2;
+}
+#image2{
+    grid-row: 1/2;
+}
+#image3{
+    grid-row: 2/3;
+}
+#image4{
+    grid-row: 2/3;
+} */
